@@ -203,7 +203,7 @@ export default function Hero() {
                 Let's Connect
               </a>
               <a
-                href="/resume.pdf"
+                href={`${import.meta.env.BASE_URL}resume.pdf`}
                 download="Sethuvekram_Resume.pdf"
                 className="btn-download-cv"
               >
@@ -249,7 +249,7 @@ export default function Hero() {
                 border: '2px solid rgba(0,212,255,0.25)',
               }}>
                 <img
-                  src="/profile.png"
+                src={`${import.meta.env.BASE_URL}profile.png`}
                   alt="Sethuvekram Shanmugasundaram"
                   style={{
                     width: '100%',
