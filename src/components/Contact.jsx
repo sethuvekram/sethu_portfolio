@@ -231,10 +231,11 @@ export default function Contact() {
                 <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
                   <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }} className="form-row">
                     <div>
-                      <label style={{ color: 'var(--text-muted)', fontSize: '0.8rem', fontWeight: 600, marginBottom: 6, display: 'block' }}>
+                      <label htmlFor="contact-name" style={{ color: 'var(--text-muted)', fontSize: '0.8rem', fontWeight: 600, marginBottom: 6, display: 'block' }}>
                         Name *
                       </label>
                       <input
+                        id="contact-name"
                         name="name" value={form.name} onChange={handleChange} required
                         placeholder="Your name"
                         style={INPUT_STYLE}
@@ -243,10 +244,11 @@ export default function Contact() {
                       />
                     </div>
                     <div>
-                      <label style={{ color: 'var(--text-muted)', fontSize: '0.8rem', fontWeight: 600, marginBottom: 6, display: 'block' }}>
+                      <label htmlFor="contact-email" style={{ color: 'var(--text-muted)', fontSize: '0.8rem', fontWeight: 600, marginBottom: 6, display: 'block' }}>
                         Email *
                       </label>
                       <input
+                        id="contact-email"
                         name="email" value={form.email} onChange={handleChange} required type="email"
                         placeholder="your@email.com"
                         style={INPUT_STYLE}
@@ -257,10 +259,11 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label style={{ color: 'var(--text-muted)', fontSize: '0.8rem', fontWeight: 600, marginBottom: 6, display: 'block' }}>
+                    <label htmlFor="contact-subject" style={{ color: 'var(--text-muted)', fontSize: '0.8rem', fontWeight: 600, marginBottom: 6, display: 'block' }}>
                       Subject
                     </label>
                     <input
+                      id="contact-subject"
                       name="subject" value={form.subject} onChange={handleChange}
                       placeholder="What's this about?"
                       style={INPUT_STYLE}
@@ -270,10 +273,11 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label style={{ color: 'var(--text-muted)', fontSize: '0.8rem', fontWeight: 600, marginBottom: 6, display: 'block' }}>
+                    <label htmlFor="contact-message" style={{ color: 'var(--text-muted)', fontSize: '0.8rem', fontWeight: 600, marginBottom: 6, display: 'block' }}>
                       Message *
                     </label>
                     <textarea
+                      id="contact-message"
                       name="message" value={form.message} onChange={handleChange} required
                       placeholder="Tell me about your project or opportunity..."
                       rows={5}

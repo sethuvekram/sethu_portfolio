@@ -10,6 +10,7 @@ const CATEGORIES = [
       { name: 'React.js',         level: 92 },
       { name: 'Vite',             level: 88 },
       { name: 'JavaScript ES6+',  level: 90 },
+      { name: 'TypeScript',       level: 70 },
       { name: 'Tailwind CSS',     level: 85 },
       { name: 'HTML5 / CSS3',     level: 92 },
       { name: 'Sass / SCSS',      level: 80 },

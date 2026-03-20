@@ -5,37 +5,37 @@ const DEVOPS_ITEMS = [
     icon: <Container size={22} />,
     color: '#00d4ff',
     title: 'Docker Containerization',
-    desc: 'Containerizing microservices and full-stack apps for consistent deployments across environments.',
+    desc: 'Containerizing microservices and full-stack apps with Docker & Docker Compose for consistent, reproducible deployments. 10+ services containerized in production.',
   },
   {
     icon: <Cloud size={22} />,
     color: '#7c3aed',
     title: 'AWS Cloud Deployment',
-    desc: 'Deploying and managing production services on AWS infrastructure — EC2, S3, and more.',
+    desc: 'Deploying and managing production services on AWS — EC2, S3, ECS, IAM, and RDS. End-to-end cloud infrastructure setup with least-privilege security.',
   },
   {
     icon: <RefreshCw size={22} />,
     color: '#ec4899',
     title: 'CI/CD Pipelines',
-    desc: 'Automating build, test, and deployment workflows for faster, safer releases.',
+    desc: 'Automating build, test, and deployment workflows using GitHub Actions and Jenkins. Daily deployments with zero downtime via blue-green strategies.',
   },
   {
     icon: <Server size={22} />,
     color: '#10b981',
     title: 'Server Configuration',
-    desc: 'Configuring and hardening production servers for security, performance, and uptime.',
+    desc: 'Configuring and hardening production Linux servers (Ubuntu/Amazon Linux) for security, performance, and 99.9%+ uptime. Nginx reverse proxy & SSL setup.',
   },
   {
     icon: <Activity size={22} />,
     color: '#f59e0b',
     title: 'Production Monitoring',
-    desc: 'Monitoring application health, tracking performance metrics, and ensuring system stability.',
+    desc: 'Monitoring application health with AWS CloudWatch and Grafana dashboards. Proactive alerting, log aggregation, and real-time performance metric tracking.',
   },
   {
     icon: <GitBranch size={22} />,
     color: '#a78bfa',
     title: 'Version Control & Workflows',
-    desc: 'Managing Git branching strategies, PR workflows, and collaborative development practices.',
+    desc: 'Managing Git branching strategies (Gitflow), PR workflows, and collaborative development best practices across cross-functional engineering teams.',
   },
 ]
 
@@ -107,9 +107,9 @@ export default function DevOps() {
 
           <div style={{ display: 'flex', gap: 32 }}>
             {[
-              { val: 'AWS',    sub: 'Cloud Provider' },
-              { val: 'Docker', sub: 'Containers' },
-              { val: 'CI/CD',  sub: 'Automation' },
+              { val: 'GitHub Actions',  sub: 'CI/CD Tool' },
+              { val: 'Grafana',         sub: 'Monitoring' },
+              { val: '99.9%',           sub: 'Uptime SLA' },
             ].map(s => (
               <div key={s.val} style={{ textAlign: 'center' }}>
                 <div className="stat-number" style={{ fontSize: '1.5rem' }}>{s.val}</div>

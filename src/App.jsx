@@ -5,10 +5,13 @@ import Hero       from './components/Hero'
 import About      from './components/About'
 import Skills     from './components/Skills'
 import Experience from './components/Experience'
+import Education  from './components/Education'
 import Projects   from './components/Projects'
 import DevOps     from './components/DevOps'
 import Contact    from './components/Contact'
 import Footer     from './components/Footer'
+import AIChat       from './components/AIChat'
+import SkillMatcher from './components/SkillMatcher'
 import { Zap, Target, Users, CheckCircle2, ArrowRight, Star } from 'lucide-react'
 
 /* ─────────────────────────────────────────
@@ -726,6 +729,7 @@ export default function App() {
       <CursorGlow />
       <SocialSidebar />
       <BackToTop />
+      <AIChat />
       <Navbar />
       <main>
         <Hero />
@@ -733,7 +737,9 @@ export default function App() {
         <Reveal><About /></Reveal>
         <WhyHireMe />
         <Reveal delay={0.05}><Skills /></Reveal>
+        <Reveal delay={0.05}><SkillMatcher /></Reveal>
         <Reveal delay={0.05}><Experience /></Reveal>
+        <Reveal delay={0.05}><Education /></Reveal>
         <Reveal delay={0.05}><Projects /></Reveal>
         <CodeShowcase />
         <Testimonials />

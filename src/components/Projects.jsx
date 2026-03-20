@@ -1,4 +1,4 @@
-import { ShoppingCart, BarChart3, Globe, CheckCircle2, Zap } from 'lucide-react'
+import { ShoppingCart, BarChart3, Globe, CheckCircle2, Zap, Lock, Mail } from 'lucide-react'
 
 const PROJECTS = [
   {
@@ -7,6 +7,7 @@ const PROJECTS = [
     accent: 'linear-gradient(90deg, #00d4ff, #7c3aed)',
     label: 'Enterprise Platform',
     title: 'eCommerce Inventory & Order Management System',
+    year: '2023', status: 'Live',
     desc: 'A full-scale eCommerce backend and admin platform managing product inventory, warehouse dispatch, billing, and order processing. Integrates GST billing, purchase orders, dispatch workflows, and warehouse management into a unified platform.',
     impact: [
       '15,000+ SKUs tracked across 4 warehouses in real time',
@@ -38,6 +39,7 @@ const PROJECTS = [
     accent: 'linear-gradient(90deg, #7c3aed, #ec4899)',
     label: 'Business Intelligence',
     title: 'Sales Performance Dashboard',
+    year: '2024', status: 'Live',
     desc: 'A business intelligence dashboard for internal data teams to monitor sales performance, analyze revenue trends, and generate strategic insights in real time.',
     impact: [
       'Report generation cut from 2 hours to under 30 seconds',
@@ -65,6 +67,7 @@ const PROJECTS = [
     accent: 'linear-gradient(90deg, #10b981, #00d4ff)',
     label: 'Frontend / Startup',
     title: 'Startup Customer-Facing Websites',
+    year: '2024', status: 'Live',
     desc: 'Designed and developed modern, performance-optimized websites for startup companies to showcase their products and services with a strong focus on UI/UX and SEO.',
     impact: [
       '95+ Lighthouse performance score across all pages',
@@ -179,6 +182,46 @@ export default function Projects() {
                     <h3 style={{ fontSize: 'clamp(1.1rem, 2.5vw, 1.4rem)', fontWeight: 800, lineHeight: 1.2 }}>
                       {p.title}
                     </h3>
+                  </div>
+
+                  {/* Year + private badge + CTA */}
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 8, alignItems: 'flex-end', flexShrink: 0 }}>
+                    <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', justifyContent: 'flex-end' }}>
+                      <span style={{
+                        padding: '3px 10px', borderRadius: 20,
+                        fontSize: '0.7rem', fontWeight: 600,
+                        background: 'rgba(16,185,129,0.1)', color: '#10b981',
+                        border: '1px solid rgba(16,185,129,0.2)',
+                      }}>
+                        {p.year} · {p.status}
+                      </span>
+                      <span style={{
+                        display: 'inline-flex', alignItems: 'center', gap: 4,
+                        padding: '3px 10px', borderRadius: 20,
+                        fontSize: '0.7rem', fontWeight: 600,
+                        background: 'rgba(245,158,11,0.08)', color: '#f59e0b',
+                        border: '1px solid rgba(245,158,11,0.2)',
+                      }}>
+                        <Lock size={10} /> Private Repo
+                      </span>
+                    </div>
+                    <a
+                      href={`mailto:sethu.nextgen@gmail.com?subject=Case Study Request: ${p.title}`}
+                      style={{
+                        display: 'inline-flex', alignItems: 'center', gap: 6,
+                        padding: '6px 14px', borderRadius: 20,
+                        fontSize: '0.75rem', fontWeight: 600,
+                        background: 'rgba(0,212,255,0.06)',
+                        border: '1px solid rgba(0,212,255,0.2)',
+                        color: 'var(--accent-cyan)', textDecoration: 'none',
+                        transition: 'all 0.2s',
+                        whiteSpace: 'nowrap',
+                      }}
+                      onMouseEnter={e => e.currentTarget.style.background = 'rgba(0,212,255,0.14)'}
+                      onMouseLeave={e => e.currentTarget.style.background = 'rgba(0,212,255,0.06)'}
+                    >
+                      <Mail size={12} /> Request Case Study
+                    </a>
                   </div>
                 </div>
 
