@@ -67,11 +67,38 @@ export default function Navbar() {
       <nav style={navStyle}>
         <div className="section-wrapper" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           {/* Logo */}
-          <a href="#hero" style={{ textDecoration: 'none' }}>
-            <span style={{ fontFamily: 'Inter, sans-serif', fontWeight: 800, fontSize: '1.15rem', letterSpacing: '-0.5px' }}>
-              <span className="gradient-text">Sethuvekram</span>
+          <a href="#hero" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
+            <span style={{
+              fontFamily: "'JetBrains Mono', monospace",
+              fontWeight: 700,
+              fontSize: '1.2rem',
+              letterSpacing: '0.5px',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 2,
+            }}>
+              <span style={{ color: '#00d4ff', textShadow: '0 0 12px rgba(0,212,255,0.6)' }}>{`{`}</span>
+              <span style={{
+                background: 'linear-gradient(135deg, #00d4ff, #a78bfa)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                padding: '0 4px',
+              }}>S</span>
+              <span style={{
+                color: '#a78bfa',
+                textShadow: '0 0 12px rgba(167,139,250,0.6)',
+                animation: 'nav-cursor-blink 1.1s step-end infinite',
+              }}>_</span>
+              <span style={{ color: '#a78bfa', textShadow: '0 0 12px rgba(167,139,250,0.6)' }}>{`}`}</span>
             </span>
           </a>
+
+          <style>{`
+            @keyframes nav-cursor-blink {
+              0%, 100% { opacity: 1; }
+              50%       { opacity: 0; }
+            }
+          `}</style>
 
           {/* Desktop links */}
           <div style={{ display: 'flex', gap: 36, alignItems: 'center' }} className="desktop-nav">
