@@ -539,7 +539,7 @@ function BackToTop() {
       aria-label="Back to top"
       style={{
         position: 'fixed',
-        bottom: 32,
+        bottom: 96,
         right: 32,
         zIndex: 200,
         width: 46,
